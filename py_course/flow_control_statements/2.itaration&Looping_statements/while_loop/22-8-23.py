@@ -4,4 +4,4 @@ i=0
 while i<len(n):
         print(n[i])
         i+=1
-print(c)
+print()
