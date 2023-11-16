@@ -39,8 +39,8 @@ LOCAL VARIABLES:
 .These are the variables defined or created inside the function area/nested function area known as local variables.
 .We can access,modfy,delete,create the local variables in that functon.
 .When the control enters the function area/method area then it executes those statements.These variables will be created once the function call is done.
-(Variables life scope will start the function execution and once after function execution is done then variable sxope is deallocated).
-These variables woll be deleted once the control comes out of the function area/method area.
+(Variables life scope will start the function execution and once after function execution is done then variable scope is deallocated).
+These variables will be deleted once the control comes out of the function area/method area.
 .We can access local variables inside child functions (nested functions) but it is not possible to modify modify local variables inside nested function
 .To overcome the above problem,we make use of nonlocal keywords.
 .By using nonlocal keyword, we can get permission from the non-local space to manipulate the non-local variable in local space.
@@ -51,9 +51,11 @@ def hello():
            #all these variables are valled as local variable
 hello()
 
-.When the control reaches the function area. all statements are executed one by one.If in case any variables are present, that variables will be created inside the function space.
+.When the control reaches the function area. all statements are executed one by one.
+ If in case any variables are present, that variables will be created inside the function space.
 '''
 '''
+
 NON-LOCAL VARIABLES:
 
 .If we want to access the local variables in nested function directly we can do and the nested function is allowed. But if we want to modify or delete it, then it will not allow.
@@ -73,7 +75,7 @@ Note:
 Once we specify the variable as a nonlocal then the modification and deletion of it will affect the local function area only.
 '''
 '''
-LOCAL VARIABLE          GLOBAL SPACE        ENCLOSED/LOCAL SPACE        LOCAL SPACE
+LOCAL VARIABLE          GLOBAL SPACE        ENCLOSED/LOCAL SPACE        non-LOCAL SPACE
 
 1.Initialization          Impossible          Possible                    Impossible
 2.Fetch                   Impossible          Possible                    Possible
@@ -82,7 +84,7 @@ LOCAL VARIABLE          GLOBAL SPACE        ENCLOSED/LOCAL SPACE        LOCAL SP
 
 -------------------------------------------------------------------------------------------------------
 
-LOCAL VARIABLE          GLOBAL SPACE        ENCLOSED/LOCAL SPACE        LOCAL SPACE
+LOCAL VARIABLE          GLOBAL SPACE        ENCLOSED/LOCAL SPACE         non-LOCAL SPACE
 
 1.Initialization          Impossible          Impossible                    Possible
 2.Fetch                   Impossible          Impossible                    Possible
